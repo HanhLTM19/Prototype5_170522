@@ -32,25 +32,22 @@ public class Target : MonoBehaviour
     {
         
     }
-    private void OnMouseDown()
-    {
-        Destroy(gameObject);
-        gameController.UpdateScore(pointValue);
-        Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
-    }
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
         if (!gameObject.CompareTag("Bad"))
         {
-            gameController.UpdateLives(gameController.GetLives() - 1);
-            if (gameController.GetLives() == 0)
-            {
-                gameController.SetIsGameOver(true);
-            }
+            gameController.UpdateLives();
         }
-
-        
+    }
+    public void DestroyTarget()
+    {
+        if (!gameController.IsGameOver())
+        {
+            Destroy(gameObject);
+            gameController.UpdateScore(pointValue);
+            Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+        }
     }
     Vector3 RandomForce()
     {
