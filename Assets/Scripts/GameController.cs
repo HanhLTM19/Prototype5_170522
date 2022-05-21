@@ -176,7 +176,7 @@ public class GameController : MonoBehaviour
     }
     public void UpdateLives()
     {
-        if (maxLive > 0)
+        if (maxLive > 1)
         {
             maxLive = maxLive - 1;
         }

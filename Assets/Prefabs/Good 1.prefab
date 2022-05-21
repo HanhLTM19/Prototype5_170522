@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 1490936891093553735}
   - component: {fileID: 2317320786950986667}
   - component: {fileID: 8254150313023782854}
-  - component: {fileID: 4126275125856599642}
+  - component: {fileID: 3743538009613248993}
+  - component: {fileID: -1185572304941353334}
   m_Layer: 0
   m_Name: Good 1
-  m_TagString: Untagged
+  m_TagString: Good
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,13 +28,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9109443121239122742}
-  m_LocalRotation: {x: 0.030857218, y: 0.38143733, z: 0.07449592, w: 0.9208712}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0.45, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 9.25}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1490936891093553735
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -96,7 +97,24 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.9964992, y: 0.99649537, z: 0.9964957}
   m_Center: {x: 0.0000001937151, y: 0, z: -0.000000014901161}
---- !u!54 &4126275125856599642
+--- !u!114 &3743538009613248993
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9109443121239122742}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed682544b9f6f2441bb322083686361a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointValue: 15
+  explosionParticle: {fileID: 7303472089845130122, guid: 6cbc21f5e9162483993a2b84b14d5ac8, type: 3}
+  maxSpeed: 15
+  timeZeroToMax: 10
+  forwardVelocity: 0
+--- !u!54 &-1185572304941353334
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -110,5 +128,5 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 0
   m_CollisionDetection: 0

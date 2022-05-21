@@ -13,10 +13,11 @@ GameObject:
   - component: {fileID: 5546600954035416819}
   - component: {fileID: 5517739337591998721}
   - component: {fileID: 7291584068547523189}
-  - component: {fileID: -2150711834563089064}
+  - component: {fileID: 1667565236239545447}
+  - component: {fileID: -6061243173069443509}
   m_Layer: 0
   m_Name: Good 3
-  m_TagString: Untagged
+  m_TagString: Good
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -28,13 +29,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1477926581986289015}
-  m_LocalRotation: {x: -0.11183464, y: -0.698207, z: 0.11183464, w: 0.698207}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 2.88, y: 0, z: 0}
   m_LocalScale: {x: 0.75, y: 0.75, z: 0.75}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 18.2}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &2714045925769068156
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -110,8 +111,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pointValue: 2
-  explosionParticle: {fileID: 15085447402717889, guid: 743ce290c74ae49c19aa3f128322fc7e, type: 3}
---- !u!54 &-2150711834563089064
+  explosionParticle: {fileID: 7303472089845130122, guid: 6cbc21f5e9162483993a2b84b14d5ac8, type: 3}
+  maxSpeed: 15
+  timeZeroToMax: 19
+  forwardVelocity: 0
+--- !u!114 &1667565236239545447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1477926581986289015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed682544b9f6f2441bb322083686361a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pointValue: 5
+  explosionParticle: {fileID: 0}
+  maxSpeed: 15
+  timeZeroToMax: 10
+  forwardVelocity: 0
+--- !u!54 &-6061243173069443509
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -125,5 +146,5 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 8
+  m_Constraints: 0
   m_CollisionDetection: 0
