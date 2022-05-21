@@ -11,7 +11,7 @@ public class Target : MonoBehaviour
     private float maxRotate = 30;
     private float rangeX = 4;
     private float spawnPosY = -1;
-    private float m_rotate;
+    //private float m_rotate;
 
     GameController gameController;
     public int pointValue;
@@ -25,6 +25,7 @@ public class Target : MonoBehaviour
     float m_acceleration;
     public float forwardVelocity;
     Vector3 m_translate;
+    Quaternion m_rotation;
     Vector3 m_direction;
 
     // Start is called before the first frame update
@@ -66,18 +67,20 @@ public class Target : MonoBehaviour
 
         childTransform.Rotate(Vector3.right * Time.deltaTime * 50); // child xoay*/
 
-        //cach 3
+        
         
     }
     private void FixedUpdate()
     {
+        //cach 3
         forwardVelocity += m_acceleration * Time.deltaTime;
         forwardVelocity = Mathf.Min(forwardVelocity, maxSpeed);
         //transform.Translate(Vector3.forward * forwardVelocity);
 
         m_translate = transform.position + m_direction * forwardVelocity * Time.deltaTime;
-        transform.Rotate(new Vector3(1, 1, 0) * Time.deltaTime * 40);
-        transform.SetPositionAndRotation(m_translate, transform.rotation);
+        m_rotation = transform.rotation * Quaternion.Euler(new Vector3(1, 1, 0) * Time.deltaTime * 40);
+        //transform.Rotate(new Vector3(1, 1, 0) * Time.deltaTime * 40);
+        transform.SetPositionAndRotation(m_translate, m_rotation);
     }
     /*private void OnTriggerEnter(Collider other)
     {
